@@ -1,6 +1,19 @@
 # boardgamegeek-data-pipeline
 Pipeline de dados na nuvem para analisar tendências e padrões nos jogos de tabuleiro do BoardGameGeek
 
+## Objetivo do Trabalho
+
+**Problema a ser Resolvido:**
+Explorar as tendências e padrões nos jogos de tabuleiro para identificar quais fatores contribuem para o sucesso e popularidade de um jogo no BoardGameGeek.
+
+**Perguntas de Negócio:**
+
+Quais são os jogos de tabuleiro mais populares e bem avaliados no BoardGameGeek?
+Existe alguma correlação entre a duração do jogo e sua popularidade ou avaliação?
+Quais designers e publicadoras têm os jogos mais bem avaliados?
+Como a popularidade e as avaliações de jogos mudaram ao longo dos anos?
+Quais categorias de jogos são mais populares e quais têm as melhores avaliações?
+
 ## Coleta de Dados
 
 A coleta de dados foi realizada por meio do download direto do arquivo disponível no seguinte link: [BoardGameGeek Dataset](https://ieee-dataport.org/open-access/boardgamegeek-dataset-board-games). Este dataset contém as seguintes informações:
