@@ -20,21 +20,21 @@ A coleta de dados foi realizada por meio do download direto do arquivo disponív
 
 O dataset contém informações sobre diversos jogos de tabuleiro. Abaixo está uma tabela que descreve cada campo disponível no arquivo baixado:
 
-| Nome do Campo em Inglês                | Descrição em Português                                                 | Tipo de Dado      |
-|----------------------------------------|------------------------------------------------------------------------|-------------------|
-| **Name**                               | Nome do jogo                                                             | string             |
-| **Year published**                     | Ano de publicação do jogo                                                | number |
-| **Minimum number of players recommended** | Número mínimo de jogadores                                 | number    |
-| **Maximum number of players recommended** | Número máximo de jogadores                                 | number    |
-| **Playing time**                       | Estimativa do tempo de jogo em minutos                                                 | number   |
-| **Recommended minimum age of players** | Idade mínima recomendada dos jogadores                                  | number   |
-| **Number of users that rated the game**| Número de usuários que avaliaram o jogo                                 | number   |
-| **Average rating received by the game**| Avaliação média recebida pelo jogo                                      | number    |
-| **BGG rank**                           | Classificação do jogo no BoardGameGeek                                  | number    |
-| **Average complexity value of the game** | Valor médio de complexidade do jogo                                     | number    |
-| **Number of BGG registered owners of the game** | Número de proprietários registrados no BoardGameGeek                    | number    |
-| **Mechanics used by the game**        | Mecânicas usadas pelo jogo                                               | string             |
-| **Board game domains that the game belongs to** | Domínios dos jogos de tabuleiro aos quais o jogo pertence               | string             |
+| **Column**                                             | **Description**                                                                                   | **Data Type**     |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
+| `Name`                                                 | Name of the board game                                                                           | String           |
+| `Year published`                                      | Year when the board game was published                                                           | Integer          |
+| `Minimum number of players recommended`              | Minimum number of players recommended for the game                                             | Integer          |
+| `Maximum number of players recommended`              | Maximum number of players recommended for the game                                             | Integer          |
+| `Playing time`                                        | Duration of the game in minutes                                                                   | Integer          |
+| `Recommended minimum age of players`                  | Minimum recommended age for players                                                              | Integer          |
+| `Number of users that rated the game`                 | Number of users who have rated the game                                                           | Integer          |
+| `Average rating received by the game`                 | Average rating given to the game                                                                 | Float            |
+| `BGG rank`                                             | Rank of the game on BoardGameGeek                                                                 | Integer          |
+| `Average complexity value of the game`                | Average complexity rating of the game                                                             | Float            |
+| `Number of BGG registered owners of the game`         | Number of registered owners on BoardGameGeek                                                     | Integer          |
+| `Mechanics used by the game`                           | Mechanics that are used in the game                                                                | String           |
+| `Board game domains that the game belongs to`         | Domains or categories that the game belongs to                                                   | String           |
 
 **Evidências da Coleta:**
 - O arquivo baixado foi armazenado na pasta `data/raw/` com o nome `BGG_Data_Set.xlsx`.
