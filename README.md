@@ -21,9 +21,9 @@ The data was collected by directly downloading the file available at the followi
 The dataset contains information about various board games. Below is a table describing each available field:
 
 
-| **Column**                                             | **Description**                                                                                   | **Data Type**     |
+| **Column**                                             | **Description**                                                                                   | **Data Type**    |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
-| `ID`                                                   | Game identification code                                                                          | Integer           |
+| `ID`                                                   | Game identification code                                                                          | Integer          |
 | `Name`                                                 | Name of the board game                                                                            | String           |
 | `Year Published`                                       | Year when the board game was published                                                            | Integer          |
 | `Min Players`                                          | Minimum number of players recommended for the game                                                | Integer          |
