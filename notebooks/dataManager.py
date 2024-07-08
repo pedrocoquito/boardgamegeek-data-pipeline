@@ -38,7 +38,7 @@ df_domains.write.mode('overwrite').saveAsTable('domains_dimension')
 
 # fact table
 df_facts = df.select('game_id', 'users_rated', 'rating_average', 'complexity_average', 'owned_users')
-df_facts.write.mode('overwrite').saveAsTable('facts_table')
+df_facts.write.mode('overwrite').saveAsTable('facts')
 
 # Show created tables
 spark.sql("SHOW TABLES").show() # type: ignore

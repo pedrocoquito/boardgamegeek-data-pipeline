@@ -46,3 +46,54 @@ The data was collected by directly downloading the file available at the followi
 | `Domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
 - The file is stored in the `data/raw/` folder with the name `BGG_Data_Set.csv`.
+
+## Data Model Choice
+The star schema was used, where we have a fact table and dimension tables.
+
+## Fact and Dimension Tables
+
+### Facts Table (facts)
+
+| Column           | Description                | Data Type           | Data Values           |
+|------------------|----------------------------|---------------------|-----------------------|
+| `game_id`          | Game identification code (foreign key)             | Integer | 
+| `users_rated`      | Number of users who rated the game                 | Integer | minimum: 0, maximum: - (incremental value)
+| `rating_average`   | Average user ratings                               | Float | minimum: 0, maximum: 10
+| `complexity_average` | Average complexity rating of the game            | Float | minimum: 0, maximum: 5
+| `owned_users`      | Number of users who own the game                   | Integer | minimum: 0, maximum: - (incremental value)
+
+### Dimension Tables
+
+#### Games Dimension (games_dimension)
+
+| Column           | Description                | Data Type           | Data Values           |
+|------------------|----------------------------|---------------------|-----------------------|
+| `game_id`        | Game identification code            |  Integer | 
+| `name`           | Name of the game                    | String |
+| `year_published` | Year the game was published         | Integer | minimum: 2001, maximum: 2021
+| `min_players`    | Minimum number of players           | Integer | minimum: 1, maximum: 999 (For games without min players)
+| `max_players`    | Maximum number of players           | Integer | minimum: 1, maximum: 999 (For games without max players)
+| `play_time`      | Duration of the game in minutes     | Integer | minimum: 1, maximum: 999 (For games with campaign)
+| `min_age`        | Minimum recommended age for players | Integer | minimum: 1, maximum: 21
+
+#### Mechanics Dimension (mechanics_dimension)
+
+| Column           | Description                | Data Type           | Data Values           |
+|------------------|----------------------------|---------------------|-----------------------|
+| `mechanic_id`    | Mechanic identification code |  Integer | 
+| `mechanics`      | Mechanics on the game       | String | Cooperative Game, Deck Construction, Hand Management, Role Playing ...
+| `game_id`        | Game identification code   |  Integer | 
+
+#### Domains Dimension (domains_dimension)
+
+| Column           | Description                | Data Type           | Data Values           |
+|------------------|----------------------------|---------------------|-----------------------|
+| `domain_id`      | Domain identification code |  Integer | 
+| `domains`        | Domains of the game         | String | Children's Games, Family Games, Party Games ...
+| `game_id`        | Game identification code   |  Integer | 
+
+
+## Data Lineage
+- **Data Source:** The data was downloaded from the kaggle website.
+- **Collection Technique:** Direct download of the CSV file.
+- **Transformations:** The data will be transformed to fit the Star Schema model, creating fact and dimension tables as described.
