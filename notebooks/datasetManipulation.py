@@ -4,7 +4,7 @@ import pandas as pd # type: ignore
 input_file = '../data/raw/BGG_Data_Set.csv'
 
 # Load the CSV file into a DataFrame
-df =df = pd.read_csv(input_file, encoding='ISO-8859-1')
+df = df = pd.read_csv(input_file, encoding='ISO-8859-1')
 
 # Check if the 'Year Published' column exists in the DataFrame
 if 'Year Published' not in df.columns:
