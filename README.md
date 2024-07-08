@@ -50,8 +50,6 @@ The data was collected by directly downloading the file available at the followi
 ## Data Model Choice
 The star schema was used, where we have a fact table and dimension tables.
 
-## Fact and Dimension Tables
-
 ### Facts Table (facts)
 
 | Column           | Description                | Data Type           | Data Values           |
