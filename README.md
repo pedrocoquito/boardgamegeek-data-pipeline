@@ -4,20 +4,24 @@ Cloud data pipeline to analyze trends and patterns in BoardGameGeek board games.
 ## Objective of the Project
 
 **Problem to be Solved:**
-Explore trends and patterns in board games to identify which factors contribute to a game's success and popularity on BoardGameGeek.
+Explore trends and patterns in board games to identify which factors contribute to a game's success and popularity on BoardGameGeek from 2001 to 2021.
 
 **Business Questions:**
 
-1) What are the most popular and highly rated board games on BoardGameGeek?
-2) Is there any correlation between game duration and its popularity or rating?
-3) 
-4) How have the popularity and ratings of games changed over the years?
-5) Which game categories are the most popular and which have the best ratings?
+| Question                                                                                          | Objective                                                                                 |
+|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| 1 - What are the most popular and highly rated board games on BoardGameGeek?                         | Identify the most popular and highest-rated board games.                                    |
+| 2 - Is there a correlation between game duration and its popularity or rating?                        | Investigate if game duration is related to the game’s popularity and rating.                |
+| 3 - Is there a correlation between the recommended minimum age and a game's popularity?              | Analyze if the recommended minimum age affects the game’s popularity.                        |
+| 4 - What is the complexity of the most popular games?                                                 | Determine the complexity levels of the most popular games.                                    |
+| 5 - How have the popularity and ratings of games changed over the years?                               | Examine trends in game popularity and ratings over time.                                      |
+| 6 - Which game categories are the most popular and which have the best ratings?                       | Identify the most popular game categories and those with the highest ratings.                |
+| 7 - Is there a correlation between popularity and a game's rating?                                     | Explore if there is a relationship between a game’s popularity and its rating.                |
+| 8 - What is the relationship between the recommended number of players and a game’s popularity?       | Examine if the recommended number of players affects the game’s popularity.                   |
 
 ## Data Collection
 
 The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/melissamonfared/board-games). This dataset contains the following information:
-
 The dataset contains information about various board games. Below is a table describing each available field:
 
 
