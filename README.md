@@ -38,4 +38,4 @@ O dataset contém informações sobre diversos jogos de tabuleiro. Abaixo está 
 | `domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
 **Evidências da Coleta:**
-- O arquivo baixado foi armazenado na pasta `data/raw/` com o nome `bgg_dataset.csv`.
+- O arquivo está armazenado na pasta `data/raw/` com o nome `bgg_dataset.csv`.
