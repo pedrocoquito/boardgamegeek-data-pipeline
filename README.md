@@ -36,8 +36,6 @@ Explore trends and patterns in board games to identify which factors contribute 
 ## Data Collection
 
 The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/melissamonfared/board-games). This dataset contains the following information:
-The dataset contains information about various board games. Below is a table describing each available field:
-
 
 | **Column**                                             | **Description**                                                                                   | **Data Type**    |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
