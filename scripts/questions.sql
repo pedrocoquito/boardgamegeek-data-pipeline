@@ -32,3 +32,11 @@ JOIN games_dimension gd ON gd.id = dd.id
 GROUP BY dd.domain_name
 ORDER BY avg_rating DESC, num_games DESC
 LIMIT 20;
+
+# 6
+
+
+# 7
+
+
+# 8
