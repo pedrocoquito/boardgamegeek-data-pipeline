@@ -1,7 +1,7 @@
 from pyspark.sql.functions import explode, split, monotonically_increasing_id # type: ignore
 
 # Load CSV data
-file_location = "/FileStore/tables/BGG_Data_Set-1.csv"
+file_location = "/FileStore/tables/dataset.csv"
 df = spark.read.csv(file_location, header=True, inferSchema=True) # type: ignore
 
 # Rename collumns

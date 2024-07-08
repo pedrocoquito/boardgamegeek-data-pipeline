@@ -26,6 +26,6 @@ df_facts.groupBy(df_facts.columns).count().filter("count > 1").show()
 df_games.describe(['year_published', 'min_players', 'max_players', 'play_time', 'min_age']).show()
 df_facts.describe(['users_rated', 'rating_average', 'bgg_rank', 'complexity_average', 'owned_users']).show()
 
-# Mechanic and. Domain analysis
+# Mechanic and Domain analysis
 df_mechanics.groupBy('mechanic_name').count().orderBy('count', ascending=False).show()
 df_domains.groupBy('domain_name').count().orderBy('count', ascending=False).show()
