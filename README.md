@@ -18,7 +18,7 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 5. **How have the popularity and ratings of games changed over the years?**
 
-6. **Which game categories are the most popular and which have the best ratings?**
+6. **Which game Mechanics and Domains are the most popular and which have the best ratings?**
 
 7. **Is there a correlation between popularity and a game's rating?**
 
