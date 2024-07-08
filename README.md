@@ -10,13 +10,13 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 1) What are the most popular and highly rated board games on BoardGameGeek?
 2) Is there any correlation between game duration and its popularity or rating?
-3) Which designers and publishers have the highest-rated games?
+3) 
 4) How have the popularity and ratings of games changed over the years?
 5) Which game categories are the most popular and which have the best ratings?
 
 ## Data Collection
 
-The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/andrewmvd/board-games). This dataset contains the following information:
+The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/melissamonfared/board-games). This dataset contains the following information:
 
 The dataset contains information about various board games. Below is a table describing each available field:
 
@@ -39,4 +39,4 @@ The dataset contains information about various board games. Below is a table des
 | `Domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
 **Collection Evidence:**
-- The file is stored in the `data/raw/` folder with the name `bgg_dataset.csv`.
+- The file is stored in the `data/` folder with the name `BGG_Data_Set.csv`.
