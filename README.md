@@ -1,24 +1,25 @@
 # boardgamegeek-data-pipeline
-Pipeline de dados na nuvem para analisar tendências e padrões nos jogos de tabuleiro do BoardGameGeek
+Cloud data pipeline to analyze trends and patterns in BoardGameGeek board games.
 
-## Objetivo do Trabalho
+## Objective of the Project
 
-**Problema a ser Resolvido:**
-Explorar as tendências e padrões nos jogos de tabuleiro para identificar quais fatores contribuem para o sucesso e popularidade de um jogo no BoardGameGeek.
+**Problem to be Solved:**
+Explore trends and patterns in board games to identify which factors contribute to a game's success and popularity on BoardGameGeek.
 
-**Perguntas de Negócio:**
+**Business Questions:**
 
-- Quais são os jogos de tabuleiro mais populares e bem avaliados no BoardGameGeek?
-- Existe alguma correlação entre a duração do jogo e sua popularidade ou avaliação?
-- Quais designers e publicadoras têm os jogos mais bem avaliados?
-- Como a popularidade e as avaliações de jogos mudaram ao longo dos anos?
-- Quais categorias de jogos são mais populares e quais têm as melhores avaliações?
+- What are the most popular and highly rated board games on BoardGameGeek?
+- Is there any correlation between game duration and its popularity or rating?
+- Which designers and publishers have the highest-rated games?
+- How have the popularity and ratings of games changed over the years?
+- Which game categories are the most popular and which have the best ratings?
 
-## Coleta de Dados
+## Data Collection
 
-A coleta de dados foi realizada por meio do download direto do arquivo disponível no seguinte link: [BoardGameGeek Dataset](https://ieee-dataport.org/open-access/boardgamegeek-dataset-board-games). Este dataset contém as seguintes informações:
+The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://ieee-dataport.org/open-access/boardgamegeek-dataset-board-games). This dataset contains the following information:
 
-O dataset contém informações sobre diversos jogos de tabuleiro. Abaixo está uma tabela que descreve cada campo disponível:
+The dataset contains information about various board games. Below is a table describing each available field:
+
 
 | **Column**                                             | **Description**                                                                                   | **Data Type**     |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
@@ -37,5 +38,5 @@ O dataset contém informações sobre diversos jogos de tabuleiro. Abaixo está 
 | `mechanics`                                            | Mechanics that are used in the game                                                               | String           |
 | `domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
-**Evidências da Coleta:**
-- O arquivo está armazenado na pasta `data/raw/` com o nome `bgg_dataset.csv`.
+**Collection Evidence:**
+- The file is stored in the `data/raw/` folder with the name `bgg_dataset.csv`.
