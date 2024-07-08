@@ -23,20 +23,20 @@ The dataset contains information about various board games. Below is a table des
 
 | **Column**                                             | **Description**                                                                                   | **Data Type**     |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
-| `id`                                                   | Game identification code                                                                          | Integer           |
-| `name`                                                 | Name of the board game                                                                            | String           |
-| `year_published`                                       | Year when the board game was published                                                            | Integer          |
-| `minimum_age`                                          | Minimum number of players recommended for the game                                                | Integer          |
-| `maximum_players`                                      | Maximum number of players recommended for the game                                                | Integer          |
-| `playing_time`                                         | Duration of the game in minutes                                                                   | Integer          |
-| `minimum_age`                                          | Minimum recommended age for players                                                               | Integer          |
-| `users_rated`                                          | Number of users who have rated the game                                                           | Integer          |
-| `rating_average`                                       | Average rating given to the game                                                                  | Float            |
-| `bgg_rank`                                             | Rank of the game on BoardGameGeek                                                                 | Integer          |
-| `complexity_average`                                   | Average complexity rating of the game                                                             | Float            |
-| `owned_users`                                          | Number of registered owners on BoardGameGeek                                                      | Integer          |
-| `mechanics`                                            | Mechanics that are used in the game                                                               | String           |
-| `domains`                                              | Domains or categories that the game belongs to                                                    | String           |
+| `ID`                                                   | Game identification code                                                                          | Integer           |
+| `Name`                                                 | Name of the board game                                                                            | String           |
+| `Year Published`                                       | Year when the board game was published                                                            | Integer          |
+| `Min Players`                                          | Minimum number of players recommended for the game                                                | Integer          |
+| `Max Players`                                          | Maximum number of players recommended for the game                                                | Integer          |
+| `Play Time`                                            | Duration of the game in minutes                                                                   | Integer          |
+| `Min Age`                                              | Minimum recommended age for players                                                               | Integer          |
+| `Users Rated`                                          | Number of users who have rated the game                                                           | Integer          |
+| `Rating Average`                                       | Average rating given to the game                                                                  | Float            |
+| `BGG Rank`                                             | Rank of the game on BoardGameGeek                                                                 | Integer          |
+| `Complexity Average`                                   | Average complexity rating of the game                                                             | Float            |
+| `Owned Users`                                          | Number of registered owners on BoardGameGeek                                                      | Integer          |
+| `Mechanics`                                            | Mechanics that are used in the game                                                               | String           |
+| `Domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
 **Collection Evidence:**
 - The file is stored in the `data/raw/` folder with the name `bgg_dataset.csv`.
