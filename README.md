@@ -8,11 +8,11 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 **Business Questions:**
 
-- What are the most popular and highly rated board games on BoardGameGeek?
-- Is there any correlation between game duration and its popularity or rating?
-- Which designers and publishers have the highest-rated games?
-- How have the popularity and ratings of games changed over the years?
-- Which game categories are the most popular and which have the best ratings?
+1) What are the most popular and highly rated board games on BoardGameGeek?
+2) Is there any correlation between game duration and its popularity or rating?
+3) Which designers and publishers have the highest-rated games?
+4) How have the popularity and ratings of games changed over the years?
+5) Which game categories are the most popular and which have the best ratings?
 
 ## Data Collection
 
