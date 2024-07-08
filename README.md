@@ -8,16 +8,30 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 **Business Questions:**
 
-| Question                                                                                          | Objective                                                                                 |
-|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| 1 - What are the most popular and highly rated board games on BoardGameGeek?                         | Identify the most popular and highest-rated board games.                                    |
-| 2 - Is there a correlation between game duration and its popularity or rating?                        | Investigate if game duration is related to the game’s popularity and rating.                |
-| 3 - Is there a correlation between the recommended minimum age and a game's popularity?              | Analyze if the recommended minimum age affects the game’s popularity.                        |
-| 4 - What is the complexity of the most popular games?                                                 | Determine the complexity levels of the most popular games.                                    |
-| 5 - How have the popularity and ratings of games changed over the years?                               | Examine trends in game popularity and ratings over time.                                      |
-| 6 - Which game categories are the most popular and which have the best ratings?                       | Identify the most popular game categories and those with the highest ratings.                |
-| 7 - Is there a correlation between popularity and a game's rating?                                     | Explore if there is a relationship between a game’s popularity and its rating.                |
-| 8 - What is the relationship between the recommended number of players and a game’s popularity?       | Examine if the recommended number of players affects the game’s popularity.                   |
+1. **What are the most popular and highly rated board games on BoardGameGeek?**
+   - **Objective:** Identify the most popular and highest-rated board games.
+
+2. **Is there a correlation between game duration and its popularity or rating?**
+   - **Objective:** Investigate if game duration is related to the game’s popularity and rating.
+
+3. **Is there a correlation between the recommended minimum age and a game's popularity?**
+   - **Objective:** Analyze if the recommended minimum age affects the game’s popularity.
+
+4. **What is the complexity of the most popular games?**
+   - **Objective:** Determine the complexity levels of the most popular games.
+
+5. **How have the popularity and ratings of games changed over the years?**
+   - **Objective:** Examine trends in game popularity and ratings over time.
+
+6. **Which game categories are the most popular and which have the best ratings?**
+   - **Objective:** Identify the most popular game categories and those with the highest ratings.
+
+7. **Is there a correlation between popularity and a game's rating?**
+   - **Objective:** Explore if there is a relationship between a game’s popularity and its rating.
+
+8. **What is the relationship between the recommended number of players and a game’s popularity?**
+   - **Objective:** Examine if the recommended number of players affects the game’s popularity.
+
 
 ## Data Collection
 
