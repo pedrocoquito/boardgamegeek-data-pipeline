@@ -16,7 +16,7 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 ## Data Collection
 
-The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://ieee-dataport.org/open-access/boardgamegeek-dataset-board-games). This dataset contains the following information:
+The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/andrewmvd/board-games). This dataset contains the following information:
 
 The dataset contains information about various board games. Below is a table describing each available field:
 
