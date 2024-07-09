@@ -1,0 +1,57 @@
+{
+  "cluster_id": "private",
+  "creator_user_name": "coquitopedro@gmail.com",
+  "driver": {
+    "private_ip": "private",
+    "public_dns": "ec2-52-39-246-120.us-west-2.compute.amazonaws.com",
+    "node_id": "c7779988a3b44003aa0bbdade327a820",
+    "instance_id": "i-0f8f49f7ce93ebec4",
+    "start_timestamp": 1720557155728,
+    "node_aws_attributes": {
+      "is_spot": false
+    },
+    "node_attributes": {
+      "is_spot": false
+    },
+    "host_private_ip": "private"
+  },
+  "spark_context_id": 3829434607084827000,
+  "driver_healthy": true,
+  "jdbc_port": 10000,
+  "cluster_name": "DS-Cluster",
+  "spark_version": "12.2.x-scala2.12",
+  "spark_conf": {
+    "spark.databricks.rocksDB.fileManager.useCommitService": "false"
+  },
+  "aws_attributes": {
+    "first_on_demand": 0,
+    "availability": "ON_DEMAND",
+    "zone_id": "auto",
+    "spot_bid_price_percent": 100,
+    "ebs_volume_count": 0
+  },
+  "node_type_id": "dev-tier-node",
+  "driver_node_type_id": "dev-tier-node",
+  "spark_env_vars": {
+    "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+  },
+  "autotermination_minutes": 60,
+  "enable_elastic_disk": false,
+  "disk_spec": {
+    "disk_count": 0
+  },
+  "enable_local_disk_encryption": false,
+  "runtime_engine": "STANDARD",
+  "effective_spark_version": "12.2.x-scala2.12",
+  "state": "RUNNING",
+  "state_message": "",
+  "start_time": 1720557154538,
+  "terminated_time": 0,
+  "last_state_loss_time": 0,
+  "last_activity_time": 1720558855366,
+  "last_restarted_time": 1720557238402,
+  "num_workers": 0,
+  "cluster_memory_mb": 15616,
+  "cluster_cores": 2,
+  "init_scripts_safe_mode": false
+}

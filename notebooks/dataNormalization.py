@@ -8,7 +8,7 @@ spark = SparkSession.builder.appName("Data Normalization").getOrCreate()
 
 # Load data
 df_games = spark.table('games_dimension')
-df_facts = spark.table('facts_table')
+df_facts = spark.table('facts')
 
 # Step 1: Remove duplicate items
 df_games = df_games.dropDuplicates()
@@ -26,6 +26,8 @@ df_games = df_games.withColumn('min_age', when(col('min_age') > 21, 21).otherwis
 
 # Step 4: Apply median value for min_age and play_time when 0
 def apply_median_for_zero_values(df, column, ref_column):
+    if ref_column not in df.columns:
+        return df
     windowSpec = Window.orderBy(col(ref_column))
     df_with_row_number = df.withColumn("row_num", row_number().over(windowSpec))
     
@@ -35,13 +37,13 @@ def apply_median_for_zero_values(df, column, ref_column):
     
     return df.withColumn(column, when(col(column) == 0, lit(median_value)).otherwise(col(column)))
 
-df_games = apply_median_for_zero_values(df_games, 'min_age', 'complexity_average')
-df_games = apply_median_for_zero_values(df_games, 'play_time', 'complexity_average')
+df_games = apply_median_for_zero_values(df_games, 'min_age', 'min_players')
+df_games = apply_median_for_zero_values(df_games, 'play_time', 'min_players')
 
 # Step 5: Standardize float values
 df_facts = df_facts.withColumn('rating_average', round(col('rating_average'), 2).cast(FloatType()))
 df_facts = df_facts.withColumn('complexity_average', round(col('complexity_average'), 2).cast(FloatType()))
 
 # Save the normalized tables
-df_games.write.mode("overwrite").saveAsTable("games_dimension")
-df_facts.write.mode("overwrite").saveAsTable("facts_table")
+df_games.write.mode("overwrite").saveAsTable("games_dimension_normalized")
+df_facts.write.mode("overwrite").saveAsTable("facts_normalized")

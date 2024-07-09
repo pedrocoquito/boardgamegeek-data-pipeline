@@ -95,3 +95,14 @@ The star schema was used, where we have a fact table and dimension tables.
 - **Data Source:** The data was downloaded from the kaggle website.
 - **Collection Technique:** Direct download of the CSV file.
 - **Transformations:** The data will be transformed to fit the Star Schema model, creating fact and dimension tables as described.
+
+
+ADD Databrick links: 
+
+[Modeling and Loading Data](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784750/3650020472583597/latest.html)
+
+[Data Analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784756/3650020472583597/latest.html)
+
+[Data Normalization](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784762/3650020472583597/latest.html)
+
+[Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html)

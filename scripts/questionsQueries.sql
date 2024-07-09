@@ -1,42 +1,69 @@
-# 1 
-SELECT name, rating_average, users_rated
-FROM games_dimension gd
-JOIN facts_table ft ON gd.id = ft.id
-ORDER BY rating_average DESC, users_rated DESC
-LIMIT 20;
+-- QUESTION 1 
+SELECT g.name, f.rating_average, f.owned_users
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id
+ORDER BY f.owned_users DESC, f.rating_average DESC
+LIMIT 10;
 
-# 2
-SELECT play_time, AVG(rating_average) AS avg_rating, AVG(users_rated) AS avg_users_rated
-FROM games_dimension gd
-JOIN facts_table ft ON gd.id = ft.id
-GROUP BY play_time
-ORDER BY play_time
-LIMIT 20;
+-- QUESTION 2
+SELECT CORR(g.play_time, f.rating_average) AS correlation_play_time_rating,
+       CORR(g.play_time, f.owned_users) AS correlation_play_time_popularity
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id;
 
-# 3
+-- QUESTION 3
+SELECT CORR(g.min_age, f.owned_users) AS correlation_min_age_popularity
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id;
 
+-- QUESTION 4
+SELECT g.name, f.complexity_average
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id
+ORDER BY f.owned_users DESC
+LIMIT 10;
 
-# 4
-SELECT year_published, AVG(rating_average) AS avg_rating, COUNT(gd.id) AS num_games
-FROM games_dimension gd
-JOIN facts_table ft ON gd.id = ft.id
-WHERE year_published BETWEEN 2000 AND 2020
-GROUP BY year_published
-ORDER BY year_published;
-
-# 5
-SELECT dd.domain_name, AVG(ft.rating_average) AS avg_rating, COUNT(gd.id) AS num_games
-FROM domains_dimension dd
-JOIN facts_table ft ON dd.id = ft.id
-JOIN games_dimension gd ON gd.id = dd.id
-GROUP BY dd.domain_name
-ORDER BY avg_rating DESC, num_games DESC
-LIMIT 20;
-
-# 6
+-- QUESTION 5
+SELECT g.year_published, 
+       AVG(f.rating_average) AS avg_rating, 
+       SUM(f.owned_users) AS total_owners
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id
+GROUP BY g.year_published
+ORDER BY g.year_published;
 
 
-# 7
+-- QUESTION 6
+-- Mechanics
+SELECT m.mechanic_name, 
+       AVG(f.rating_average) AS avg_rating, 
+       SUM(f.owned_users) AS total_owners
+FROM facts_normalized f
+JOIN mechanics_dimension m ON f.game_id = m.game_id
+GROUP BY m.mechanic_name
+ORDER BY total_owners DESC, avg_rating DESC
+LIMIT 10;
 
+-- Domains
+SELECT d.domain_name, 
+       AVG(f.rating_average) AS avg_rating, 
+       SUM(f.owned_users) AS total_owners
+FROM facts_normalized f
+JOIN mechanics_dimension m ON f.game_id = m.game_id
+JOIN domains_dimension d ON f.game_id = d.game_id
+GROUP BY d.domain_name
+ORDER BY total_owners DESC, avg_rating DESC
+LIMIT 10;
 
-# 8
+-- QUESTION 7
+SELECT CORR(f.owned_users, f.rating_average) AS correlation_popularity_rating
+FROM facts_normalized f;
+
+-- QUESTION 8
+SELECT g.min_players, g.max_players, 
+       AVG(f.owned_users) AS avg_popularity
+FROM facts_normalized f
+JOIN games_dimension_normalized g ON f.game_id = g.game_id
+GROUP BY g.min_players, g.max_players
+ORDER BY avg_popularity DESC
+LIMIT 10;

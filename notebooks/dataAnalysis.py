@@ -8,7 +8,7 @@ spark = SparkSession.builder.appName("Data Analysis").getOrCreate()
 df_games = spark.table('games_dimension')
 df_mechanics = spark.table('mechanics_dimension')
 df_domains = spark.table('domains_dimension')
-df_facts = spark.table('facts_table')
+df_facts = spark.table('facts')
 
 # Verify null values
 df_games.select([count(when(isnull(c), c)).alias(c) for c in df_games.columns]).show()
