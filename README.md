@@ -139,8 +139,8 @@ The script performed the following steps:
    - The columns `min_players`, `max_players`, and `complexity_average`: Set to 1 if the value is 0 or less.
 
 3. Set Maximum Values: For specific columns, values exceeding a certain value are fixed:
-   - `max_players` and `play_time`: Capped at 999.
-   - `min_age`: Capped at 21.
+   - `max_players` and `play_time`: Limited in 999.
+   - `min_age`: Limited in 21.
 
 4. Imput Missing Values: Values in the `min_age` and `play_time` columns are imputed with the median value of the column for games with similar complexity.
  
