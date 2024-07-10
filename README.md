@@ -142,9 +142,13 @@ The script performed the following steps:
    - `max_players` and `play_time`: Capped at 999.
    - `min_age`: Capped at 21.
 
-4. Standardizing floating numbers: Rounded to 2 decimal places and formatted to avoid leading zeros and using `.` as the decimal separator.
+4. Imput Missing Values: Values in the `min_age` and `play_time` columns are imputed with the median value of the column for games with similar complexity.
+ 
+5. Standardizing floating numbers: Rounded to 2 decimal places and formatted to avoid leading zeros and using `.` as the decimal separator.
+ 
+6. The corrected data has been saved in new tables (games_dimension_normalized and facts_normalized).
 
-5. Imput Missing Values: Values in the `min_age` and `play_time` columns are imputed with the median value of the column for games with similar complexity.
+
 
 
 [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html)
