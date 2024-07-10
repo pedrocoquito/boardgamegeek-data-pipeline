@@ -146,9 +146,8 @@ The script performed the following steps:
  
 5. Standardizing floating numbers: Rounded to 2 decimal places and formatted to avoid leading zeros and using `.` as the decimal separator.
  
-6. The corrected data has been saved in new tables (games_dimension_normalized and facts_normalized).
+6. The corrected data has been saved in new tables (`games_dimension_normalized` and `facts_normalized`).
 
-
-
+## Problem solving
 
 [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html)
