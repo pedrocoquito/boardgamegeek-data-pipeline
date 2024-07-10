@@ -46,6 +46,7 @@ The data was collected by directly downloading the file available at the followi
 | `Domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
 - The file is stored in the `data/raw/` folder with the name `BGG_Data_Set.csv`.
+- The script `processDataset.py`, located in the `scripts/` folder, was used to consider only games published between the years 2001 and 2021. The file `dataset.csv` in the `data/processed/` folder was created with this script.
 
 ## Data Model Choice
 The star schema was used, where we have a fact table and dimension tables.
@@ -90,19 +91,60 @@ The star schema was used, where we have a fact table and dimension tables.
 | `domains`        | Domains of the game         | String | Children's Games, Family Games, Party Games ...
 | `game_id`        | Game identification code   |  Integer | 
 
-
-## Data Lineage
 - **Data Source:** The data was downloaded from the kaggle website.
 - **Collection Technique:** Direct download of the CSV file.
-- **Transformations:** The data will be transformed to fit the Star Schema model, creating fact and dimension tables as described.
+- **Transformations:** The data was transformed to fit the Star Schema model, creating fact and dimension tables as described. 
+- **Code:** The code for creation is in the file `modelingAndLoading.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Modeling and Loading Data](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784750/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `modelingAndLoading.png` on the `docs/` folder. 
 
+## Data Analysis and Normalization
 
-ADD Databrick links: 
+### Data Quality Analysis
 
-[Modeling and Loading Data](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784750/3650020472583597/latest.html)
+- The data analysis is used to perform checks and transformations on the dataset to ensure its quality.
+- The file `dataAnalysis.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Data Analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784756/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `dataAnalysis.png` on the `docs/` folder.
 
-[Data Analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784756/3650020472583597/latest.html)
+The script performed the following steps:
 
-[Data Normalization](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784762/3650020472583597/latest.html)
+1. Check for null values:
+    - No null values were found in the tables
+
+2. Check for duplicate values:
+    - No duplicate rows were found in the tables.
+
+3. Perform a statistical analysis on numerical attributes to identify the minimum and maximum values:
+    - `games_dimension` table:
+        - `year_published` ranges from 2001 to 2021.
+        - `min_players` ranges from 0 to 10.
+        - `max_players` ranges from 1 to 999.
+        - `play_time` ranges from 0 to 2250 minutes.
+        - `min_age` ranges from 0 to 25 years.
+    - `facts_table`:
+        - `users_rated` ranges from 30 to 182214.
+        - `rating_average` ranges from 1.1 to 97.0.
+        - `complexity_average` ranges from 0.0 to 49.0.
+        - `owned_users` ranges from 3 to 155312.
+
+4. Group the mechanics and domains by their names and counts, ordering them by the count in descending order:
+    - The most frequent mechanics and domains are listed, indicating the popularity of certain game mechanics and domains among the games.
+
+### Data Normalization
+
+- The file `dataNormalization.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Data Normalization](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784762/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `dataNormalization.png` on the `docs/` folder.
+
+The script performed the following steps:
+
+1. Remove duplicates: Duplicate entries in the dataset are removed, keeping only the first occurrence.
+
+2. Fix zero or negative values: For specific columns, values of 0 or less are replaced with a specified default value:
+   - The columns `min_players`, `max_players`, and `complexity_average`: Set to 1 if the value is 0 or less.
+
+3. Set Maximum Values: For specific columns, values exceeding a certain value are fixed:
+   - `max_players` and `play_time`: Capped at 999.
+   - `min_age`: Capped at 21.
+
+4. Standardizing floating numbers: Rounded to 2 decimal places and formatted to avoid leading zeros and using `.` as the decimal separator.
+
+5. Imput Missing Values: Values in the `min_age` and `play_time` columns are imputed with the median value of the column for games with similar complexity.
+
 
 [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html)
