@@ -156,6 +156,28 @@ The script performed the following steps:
 
 - The screenshot showing the execution on the platform is in the file `q1.png` in the `docs/` folder.
 
-These results indicate that popular games like Pandemic, 7 Wonders, and Codenames have high user ratings and ownership numbers within the BoardGameGeek community.
+The results show that the game Pandemic has significantly more users than the others by a wide margin. However, among all these games, the user ratings are quite close to each other. It can be said that they have similar ratings, although not necessarily the highest ratings on the platform.
 
+#### 2. Is there a correlation between game duration and its popularity or rating?
 
+- The screenshot showing the execution on the platform is in the file `q2.png` in the `docs/` folder.
+
+The results indicate that there is virtually no correlation between game duration and popularity, nor between game duration and game rating, as both correlations are around 0.02.
+
+#### 3. Is there a correlation between the recommended minimum age and a game's popularity?
+
+- The screenshot showing the execution on the platform is in the file `q3.png` in the `docs/` folder.
+
+In this result, it was possible to notice the impact of the recommended minimum age on the number of people who own the game. With a correlation of 0.09, it shows that minimum age can be an important criterion in game sales.
+
+#### 4. What is the complexity of the most popular games?
+
+- The screenshot showing the execution on the platform is in the file `q4.png` in the `docs/` folder.
+
+The results here are not sufficient to determine the importance of a game's difficulty on its sales quantity. It only indicates that a game does not necessarily need to be the simplest level, and more complex games are not the best sellers.
+
+#### 5. How have the popularity and ratings of games changed over the years?
+
+- The screenshot showing the execution on the platform is in the file `q5.png` in the `docs/` folder.
+
+The results show that the period between 2012 and 2018 had the highest number of users owning the games, while games in 2020 and 2021 had higher average ratings.
