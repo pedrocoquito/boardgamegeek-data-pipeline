@@ -1,5 +1,5 @@
 # boardgamegeek-data-pipeline
-Cloud data pipeline to analyze trends and patterns in BoardGameGeek board games.
+Cloud data pipeline to analyze trends and patterns on BoardGameGeek website.
 - The files `cluster.png` and `cluster.JSON` in the `docs/` folder contains information and evidence about the cluster configured in Databricks to the achievement of the project.
 
 ## Objective of the Project
