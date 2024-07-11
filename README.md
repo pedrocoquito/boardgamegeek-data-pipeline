@@ -150,4 +150,12 @@ The script performed the following steps:
 
 ## Problem solving
 
-[Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html)
+- The file `questionsQueries.sql` in the `scripts/` folder and its execution on Databricks can be found at the link [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html). These are the queries that show the results for the questions in the Business Questions section:
+
+#### 1. What are the most popular and highly rated board games on BoardGameGeek?
+
+- The screenshot showing the execution on the platform is in the file `q1.png` in the `docs/` folder.
+
+These results indicate that popular games like Pandemic, 7 Wonders, and Codenames have high user ratings and ownership numbers within the BoardGameGeek community.
+
+
