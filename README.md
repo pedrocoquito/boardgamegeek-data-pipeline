@@ -181,3 +181,22 @@ The results here are not sufficient to determine the importance of a game's diff
 - The screenshot showing the execution on the platform is in the file `q5.png` in the `docs/` folder.
 
 The results show that the period between 2012 and 2018 had the highest number of users owning the games, while games in 2020 and 2021 had higher average ratings.
+
+#### 6. Which game Mechanics and Domains are the most popular and which have the best ratings?
+
+- The screenshot showing the execution on the platform is in the file `q6-Domains.png` and `q6-Mechanics.png` in the `docs/` folder.
+
+The result shows that the "Hand Management" mechanic has the highest number of users and by a considerable margin. While the "Solo" mechanic has the highest scores on the platform.
+In terms of domains, "Strategy Games" has a higher number of players than second place ("Family Games") and although the scores are closer, the "Thematic Games" domain took first place.
+
+#### 7. Is there a correlation between popularity and a game's rating?
+
+- The screenshot showing the execution on the platform is in the file `q7.png` in the `docs/` folder.
+
+The query shows that there is no relationship between the number of game owners and the average rating of the games.
+
+#### 8. What is the relationship between the recommended number of players and a game’s popularity?
+
+- The screenshot showing the execution on the platform is in the file `q8.png` in the `docs/` folder.
+
+With this result, it is not possible to determine whether there is any relationship between the minimum age to play and the number of players who own the games.
