@@ -1,5 +1,6 @@
 # boardgamegeek-data-pipeline
 Cloud data pipeline to analyze trends and patterns in BoardGameGeek board games.
+- The files `cluster.png` and `cluster.JSON` in the `docs/` folder contains information and evidence about the cluster configured in Databricks to the achievement of the project.
 
 ## Objective of the Project
 
@@ -49,6 +50,7 @@ The data was collected by directly downloading the file available at the followi
 - The script `processDataset.py`, located in the `scripts/` folder, was used to consider only games published between the years 2001 and 2021. The file `dataset.csv` in the `data/processed/` folder was created with this script.
 
 ## Data Model Choice
+
 The star schema was used, where we have a fact table and dimension tables.
 
 ### Facts Table (facts)
@@ -200,3 +202,7 @@ The query shows that there is no relationship between the number of game owners 
 - The screenshot showing the execution on the platform is in the file `q8.png` in the `docs/` folder.
 
 With this result, it is not possible to determine whether there is any relationship between the minimum age to play and the number of players who own the games.
+
+## Conclusion
+
+With the data obtained it would be possible to determine some guidelines in the development of board games, the most determining being: Hand Management Mechanics and in the Thematic Games domain, in addition the game should not have a high complexity and guarantee a low recommended minimum age. 
