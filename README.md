@@ -1,10 +1,12 @@
 # boardgamegeek-data-pipeline
+
 Cloud data pipeline to analyze trends and patterns on BoardGameGeek website.
-- The files `cluster.png` and `cluster.JSON` in the `docs/` folder contains information and evidence about the cluster configured in Databricks to the achievement of the project.
+- The files `cluster.png` and `cluster.JSON` in the `docs/` folder contain information and evidence about the cluster configured in Databricks for achieving the project.
 
 ## Objective of the Project
 
 **Problem to be Solved:**
+
 Explore trends and patterns in board games to identify which factors contribute to a game's success and popularity on BoardGameGeek from 2001 to 2021.
 
 **Business Questions:**
@@ -27,7 +29,7 @@ Explore trends and patterns in board games to identify which factors contribute 
 
 ## Data Collection
 
-The data was collected by directly downloading the file available at the following link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/melissamonfared/board-games). This dataset contains the following information:
+The data was collected by directly downloading the file from this link: [BoardGameGeek Dataset](https://www.kaggle.com/datasets/melissamonfared/board-games). The dataset includes:
 
 | **Column**                                             | **Description**                                                                                   | **Data Type**    |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------|
@@ -46,12 +48,12 @@ The data was collected by directly downloading the file available at the followi
 | `Mechanics`                                            | Mechanics that are used in the game                                                               | String           |
 | `Domains`                                              | Domains or categories that the game belongs to                                                    | String           |
 
-- The file is stored in the `data/raw/` folder with the name `BGG_Data_Set.csv`.
-- The script `processDataset.py`, located in the `scripts/` folder, was used to consider only games published between the years 2001 and 2021. The file `dataset.csv` in the `data/processed/` folder was created with this script.
+- The file is stored in the `data/raw/` folder as `BGG_Data_Set.csv`.
+- The script `processDataset.py` in the `scripts/` folder was used to filter games published between 2001 and 2021. The resulting file `dataset.csv` is in the `data/processed/` folder.
 
 ## Data Model Choice
 
-The star schema was used, where we have a fact table and dimension tables.
+The star schema was used, which includes a fact table and dimension tables.
 
 ### Facts Table (facts)
 
@@ -93,17 +95,16 @@ The star schema was used, where we have a fact table and dimension tables.
 | `domains`        | Domains of the game         | String | Children's Games, Family Games, Party Games ...
 | `game_id`        | Game identification code   |  Integer | 
 
-- **Data Source:** The data was downloaded from the kaggle website.
-- **Collection Technique:** Direct download of the CSV file.
-- **Transformations:** The data was transformed to fit the Star Schema model, creating fact and dimension tables as described. 
-- **Code:** The code for creation is in the file `modelingAndLoading.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Modeling and Loading Data](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784750/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `modelingAndLoading.png` on the `docs/` folder. 
+- **Data Source:** Downloaded from Kaggle.
+- **Collection Technique:** Direct CSV download.
+- **Transformations:** Data was adjusted to fit the Star Schema model, creating fact and dimension tables. 
+- **Code:** The `modelingAndLoading.py` file in the `notebooks/` folder and its execution on Databricks link [Modeling and Loading Data](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784750/3650020472583597/latest.html) or see the `modelingAndLoading.png` screenshot in the `docs/` folder. 
 
 ## Data Analysis and Normalization
 
 ### Data Quality Analysis
 
-- The data analysis is used to perform checks and transformations on the dataset to ensure its quality.
-- The file `dataAnalysis.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Data Analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784756/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `dataAnalysis.png` on the `docs/` folder.
+- The file `dataAnalysis.py` in the `notebooks/` folder and its execution on Databricks can be found here: [Data Analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784756/3650020472583597/latest.html) or the screenshot on `dataAnalysis.png` file in the `docs/` folder.
 
 The script performed the following steps:
 
@@ -131,7 +132,7 @@ The script performed the following steps:
 
 ### Data Normalization
 
-- The file `dataNormalization.py` on the `notebooks/` folder and its execution on Databricks can be found at the link [Data Normalization](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784762/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the folder in the file `dataNormalization.png` on the `docs/` folder.
+- The file `dataNormalization.py` in the `notebooks/` folder and its execution on Databricks can be found at the link [Data Normalization](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784762/3650020472583597/latest.html) or the screenshot showing the execution on the platform in the file `dataNormalization.png` in the `docs/` folder.
 
 The script performed the following steps:
 
@@ -152,57 +153,50 @@ The script performed the following steps:
 
 ## Problem solving
 
-- The file `questionsQueries.sql` in the `scripts/` folder and its execution on Databricks can be found at the link [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html). These are the queries that show the results for the questions in the Business Questions section:
+- Check out the questionsQueries.sql file in the scripts/ folder and its execution on Databricks here: [Questions Queries](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2574631733088421/3142486001784768/3650020472583597/latest.html). You can also see the `q1.png` through `q8.png` screenshots in the `docs/` folder.
+
+## Results for Business Questions:
 
 #### 1. What are the most popular and highly rated board games on BoardGameGeek?
 
-- The screenshot showing the execution on the platform is in the file `q1.png` in the `docs/` folder.
-
-The results show that the game Pandemic has significantly more users than the others by a wide margin. However, among all these games, the user ratings are quite close to each other. It can be said that they have similar ratings, although not necessarily the highest ratings on the platform.
+- Screenshot `q1.png`.
+- Pandemic is the most popular with 155312 owners and second place with 112410. User ratings fairly close among the top games (~7.6).
 
 #### 2. Is there a correlation between game duration and its popularity or rating?
 
-- The screenshot showing the execution on the platform is in the file `q2.png` in the `docs/` folder.
-
-The results indicate that there is virtually no correlation between game duration and popularity, nor between game duration and game rating, as both correlations are around 0.02.
+- Screenshot `q2.png`.
+- Little to no correlation (0.02 result) between game duration and either popularity or rating.
 
 #### 3. Is there a correlation between the recommended minimum age and a game's popularity?
 
-- The screenshot showing the execution on the platform is in the file `q3.png` in the `docs/` folder.
-
-In this result, it was possible to notice the impact of the recommended minimum age on the number of people who own the game. With a correlation of 0.09, it shows that minimum age can be an important criterion in game sales.
+- Screenshot `q3.png`.
+- Minimum age has impact on game sales with a correlation of 0.09.
 
 #### 4. What is the complexity of the most popular games?
 
-- The screenshot showing the execution on the platform is in the file `q4.png` in the `docs/` folder.
-
-The results here are not sufficient to determine the importance of a game's difficulty on its sales quantity. It only indicates that a game does not necessarily need to be the simplest level, and more complex games are not the best sellers.
+- Screenshot `q4.png`.
+- No strong correlation between a game's complexity and its sales values from 1.19 to 3.24.
 
 #### 5. How have the popularity and ratings of games changed over the years?
 
-- The screenshot showing the execution on the platform is in the file `q5.png` in the `docs/` folder.
-
-The results show that the period between 2012 and 2018 had the highest number of users owning the games, while games in 2020 and 2021 had higher average ratings.
+- Screenshot `q5.png`.
+- Popularity peaked between 2012 (1715345) and 2018 (1623136) with a peak in 2015 with 2198127 owners, while ratings were higher in 2020 (14.0) and 2021 (14.9).
 
 #### 6. Which game Mechanics and Domains are the most popular and which have the best ratings?
 
-- The screenshot showing the execution on the platform is in the file `q6-Domains.png` and `q6-Mechanics.png` in the `docs/` folder.
-
-The result shows that the "Hand Management" mechanic has the highest number of users and by a considerable margin. While the "Solo" mechanic has the highest scores on the platform.
-In terms of domains, "Strategy Games" has a higher number of players than second place ("Family Games") and although the scores are closer, the "Thematic Games" domain took first place.
+- Screenshots `q6-Domains.png` and `q6-Mechanics.png`.
+- "Hand Management" with 9163625 users is the most popular mechanic; While "Thematic Games" has the highest ratings with 13.5.
 
 #### 7. Is there a correlation between popularity and a game's rating?
 
-- The screenshot showing the execution on the platform is in the file `q7.png` in the `docs/` folder.
-
-The query shows that there is no relationship between the number of game owners and the average rating of the games.
+- Screenshot `q7.png`.
+- No significant relationship (with 0.02) between the number of owners and game ratings.
 
 #### 8. What is the relationship between the recommended number of players and a game’s popularity?
 
-- The screenshot showing the execution on the platform is in the file `q8.png` in the `docs/` folder.
-
-With this result, it is not possible to determine whether there is any relationship between the minimum age to play and the number of players who own the games.
+- Screenshot `q8.png`.
+- No clear relationship between the recommended number of players and game popularity, since the minimum and maximum number of players varied a lot.
 
 ## Conclusion
 
-With the data obtained it would be possible to determine some guidelines in the development of board games, the most determining being: Hand Management Mechanics and in the Thematic Games domain, in addition the game should not have a high complexity and guarantee a low recommended minimum age. 
+The data shows that successful board games often have "Hand Management" mechanics and fit into the "Thematic Games" domain. They also tend to have low complexity and a low recommended minimum age.
